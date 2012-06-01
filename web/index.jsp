@@ -1,5 +1,5 @@
-<%@ page import="Comments.Comment" %>
-<%@ page import="Comments.CommentsContainerFactory" %>
+<%@ page import="comments.Comment" %>
+<%@ page import="comments.CommentsContainerFactory" %>
 <%@ page import="com.google.appengine.api.taskqueue.Queue" %>
 <%@ page import="com.google.appengine.api.users.User" %>
 <%@ page import="com.google.appengine.api.users.UserService" %>

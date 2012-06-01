@@ -1,6 +1,6 @@
 package taskqueue;
 
-import Comments.LuckyEmails;
+import comments.LuckyEmails;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

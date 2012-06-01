@@ -1,4 +1,4 @@
-<%@ page import="Comments.LuckyEmails" %>
+<%@ page import="comments.LuckyEmails" %>
 <%@ page import="java.io.PrintWriter" %>
 <%--
   Created by IntelliJ IDEA.

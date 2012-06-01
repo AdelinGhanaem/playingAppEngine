@@ -1,5 +1,5 @@
-import Comments.Comment;
-import Comments.CommentsContainerFactory;
+import comments.Comment;
+import comments.CommentsContainerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

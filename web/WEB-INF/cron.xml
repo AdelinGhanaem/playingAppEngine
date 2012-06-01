@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<cronentries>
+  <cron>
+    <url>/cron/cronjob</url>
+    <description>
+      This is test Cron job !!
+    </description>
+    <schedule>every 10 minutes
+    </schedule>
+  </cron>
+</cronentries>

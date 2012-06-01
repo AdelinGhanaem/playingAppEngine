@@ -1,6 +1,5 @@
 import Comments.Comment;
 import Comments.CommentsContainerFactory;
-import com.google.apphosting.api.ApiProxy;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,24 +19,6 @@ public class SignGuestbookServlet extends HttpServlet {
 
     String nickName = request.getParameter("useNickname");
     String comment = request.getParameter("content");
-//    System.out.println(ApiProxy.getCurrentEnvironment().getRemainingMillis());
-//    System.out.println(ApiProxy.getCurrentEnvironment().);
-//
-//    for (int i = 0; i < 70; i++) {
-//      try {
-//        System.out.println(i);
-//        Thread.sleep(1000);
-//
-//      } catch (InterruptedException e) {
-//        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-//      }
-//    }
-    try {
-      Thread.sleep(70000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-      System.out.println(ApiProxy.getCurrentEnvironment().getRemainingMillis());
-
       if ("".equals(comment)) {
         comment = "No comment!";
       }
@@ -49,8 +30,6 @@ public class SignGuestbookServlet extends HttpServlet {
 
       response.sendRedirect("/index.jsp");
     }
-
-  }
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

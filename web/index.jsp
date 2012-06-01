@@ -1,9 +1,12 @@
 <%@ page import="Comments.Comment" %>
 <%@ page import="Comments.CommentsContainerFactory" %>
+<%@ page import="com.google.appengine.api.taskqueue.Queue" %>
 <%@ page import="com.google.appengine.api.users.User" %>
 <%@ page import="com.google.appengine.api.users.UserService" %>
 <%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.google.appengine.api.taskqueue.QueueFactory" %>
+<%@ page import="com.google.appengine.api.taskqueue.TaskOptions" %>
 <%--
   Created by IntelliJ IDEA.
   User: clouway
@@ -18,6 +21,8 @@
 </head>
 <body>
 <%
+//    Queue queue = QueueFactory.getQueue("pull-queue");
+//    queue.add(TaskOptions.Builder.withMethod(TaskOptions.Method.PULL).payload("hello pull task !"));
     UserService userService = UserServiceFactory.getUserService();
     User user = userService.getCurrentUser();
     String useNickname = null;

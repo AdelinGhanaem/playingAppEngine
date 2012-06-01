@@ -7,6 +7,7 @@
 
 
 
+
   <servlet>
     <servlet-name>echoServlet</servlet-name>
     <servlet-class>EchoServlet</servlet-class>
@@ -17,6 +18,25 @@
     <servlet-class>SignGuestbookServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>cronJobServlet</servlet-name>
+    <servlet-class>crons.CronJobServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>luckyemail</servlet-name>
+    <servlet-class>taskqueue.LuckEmailTask</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>email</servlet-name>
+    <servlet-class>taskqueue.LuckyEmail</servlet-class>
+  </servlet>
+  <!--<servlet>-->
+    <!--<servlet-name>pullQueueTask</servlet-name>-->
+    <!--<servlet-class>taskqueue.PullQueueTask</servlet-class>-->
+  <!--</servlet>-->
+
   <servlet-mapping>
     <servlet-name>echoServlet</servlet-name>
     <url-pattern>/echo</url-pattern>
@@ -26,6 +46,26 @@
     <servlet-name>guestbookServlet</servlet-name>
     <url-pattern>/sign</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>cronJobServlet</servlet-name>
+    <url-pattern>/cron/cronjob</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>luckyemail</servlet-name>
+    <url-pattern>/luckemailtask</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>email</servlet-name>
+    <url-pattern>/luckyemail</url-pattern>
+  </servlet-mapping>
+
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>pullQueueTask</servlet-name>-->
+    <!--<url-pattern>/pulltask</url-pattern>-->
+  <!--</servlet-mapping>-->
 
 
 </web-app>

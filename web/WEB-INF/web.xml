@@ -32,6 +32,10 @@
     <servlet-name>email</servlet-name>
     <servlet-class>taskqueue.LuckyEmail</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>emploiesStoreServlet</servlet-name>
+    <servlet-class>datastore.EmploiesStoreServlet</servlet-class>
+  </servlet>
   <!--<servlet>-->
     <!--<servlet-name>pullQueueTask</servlet-name>-->
     <!--<servlet-class>taskqueue.PullQueueTask</servlet-class>-->
@@ -60,6 +64,10 @@
   <servlet-mapping>
     <servlet-name>email</servlet-name>
     <url-pattern>/luckyemail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>emploiesStoreServlet</servlet-name>
+    <url-pattern>/emploiesstore</url-pattern>
   </servlet-mapping>
 
   <!--<servlet-mapping>-->

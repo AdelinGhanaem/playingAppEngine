@@ -27,7 +27,6 @@ public class SignGuestbookServlet extends HttpServlet {
       }
       System.out.println(nickName);
       CommentsContainerFactory.getCommentsContainer().addComment(new Comment(nickName, comment));
-
       response.sendRedirect("/index.jsp");
     }
 

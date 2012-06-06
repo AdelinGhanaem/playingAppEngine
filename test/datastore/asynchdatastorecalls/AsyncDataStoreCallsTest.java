@@ -104,6 +104,7 @@ public class AsyncDataStoreCallsTest {
     Entity returnedEntity = datastoreService.get(entity.getKey());
     assertThat(returnedEntity.getProperty("name").toString(), is(equalTo("adelin")));
   }
-
-
 }
+
+
+

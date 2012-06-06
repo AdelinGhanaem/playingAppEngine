@@ -15,6 +15,7 @@ public class PrePutCallBacks {
 
   @PrePut(kinds = {"Customer"})
   public void log(PutContext putContext) {
+    System.out.println(putContext.getCurrentElement().getKey());
     System.out.println("Log method is called");
     System.out.println("Ahaaaaaaaaaaaaaaaaa !!");
     isCalled = true;

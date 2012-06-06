@@ -26,7 +26,10 @@ public class MemcacheTest {
   public void setUp() {
     helper.setUp();
   }
-
+  @After
+  public void tearDown() {
+    helper.setUp();
+  }
   @Test
   public void simpleMemcacheTest() {
     MemcacheService service = MemcacheServiceFactory.getMemcacheService();
@@ -39,10 +42,7 @@ public class MemcacheTest {
   }
 
 
-  @After
-  public void tearDown() {
-    helper.setUp();
-  }
+
 
 
 }

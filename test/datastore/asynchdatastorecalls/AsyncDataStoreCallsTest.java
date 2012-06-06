@@ -27,11 +27,12 @@ import static org.junit.Assert.assertThat;
 public class AsyncDataStoreCallsTest {
 
 
+  private AsyncDatastoreService service;
+
   //setting up app-engine testing environment;
 
   private final LocalServiceTestHelper helper = new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
-  private AsyncDatastoreService service;
 
 
   @Before
